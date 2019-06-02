@@ -9,58 +9,58 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(16.0),
+      body: Center(
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
+            Image.asset(
+              "assets/images/money.png",
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              padding: EdgeInsets.all(16),
+              margin: EdgeInsets.all(32),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.blue),
+                  borderRadius: BorderRadius.circular(5)),
+              child: Column(
+                children: <Widget>[
+                  Text("Login",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  TextFormField(
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
+                        labelText: "Phone Number",
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0))),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    color: Colors.blue,
+                    child: Text("Next"),
+                    textColor: Colors.white,
+                  ),
+                ],
+              ),
+            ),
             Column(
               children: <Widget>[
-                SizedBox(height: 80.0),
-                Image.asset(
-                  "assets/images/user.png",
-                  height: 100,
-                  width: 100,
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Text("Please Login",
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                SizedBox(
-                  height: 20.0,
-                ),
-                TextFormField(
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
-                  keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(
-                      labelText: "Phone Number",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                RaisedButton(
-                  onPressed: (){},
-                  color: Colors.blue,
-                  child: Text("Next"),
-                  textColor: Colors.white,
-                ),
-                SizedBox(
-                  height: 100.0,
-                ),
                 Text(
                   "Sign Up with?",
                   style: TextStyle(
                     fontSize: 16,
                   ),
-                ),
-                SizedBox(
-                  height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +69,9 @@ class _LoginState extends State<Login> {
                       icon: Image.asset("assets/images/google.png"),
                       onPressed: () {},
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(
+                      height: 20,
+                    ),
                     IconButton(
                       icon: Image.asset("assets/images/facebook.png"),
                       onPressed: () {},
